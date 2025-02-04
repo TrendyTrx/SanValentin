@@ -10,6 +10,13 @@ $(document).ready(function() {
     }, 600);
 })
 
+document.getElementById("btnIntro").addEventListener("click", function() {
+    const audio = document.getElementById("bgMusic");
+    if (audio.paused) {
+        audio.play().catch(error => console.log("Error al reproducir:", error));
+    }
+});
+
 function init(){
     $('#title').text(CONFIG.title)
     $('#desc').text(CONFIG.desc)
